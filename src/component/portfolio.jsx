@@ -8,7 +8,7 @@ const projects = [
     tech: "React, Tailwind CSS",
     github: "#",
     live: "#",
-    isLive: True,
+    isLive: true,
   },
   {
     title: "Brain dump App",
@@ -17,7 +17,7 @@ const projects = [
     tech: "React, JavaScript, CSS",
     github: "https://github.com/Isholavictor2424/BrainDump",
     live: "http://brain-dump-sigma.vercel.app/",
-    isLive: True,
+    isLive: true,
   },
  {
   title: "Duvic-Drop Commerce App",
