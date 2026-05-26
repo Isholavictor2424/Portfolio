@@ -4,7 +4,7 @@ import react from "../assets/react.svg";
 import reactnative from "../assets/react.svg";
 import css from "../assets/css.svg";
 import js from "../assets/js.svg";
-import node from "../assets/vector.png";
+import node from "../assets/Vector.png";
 import bootstrap from "../assets/bootstrap.svg";
 import typescript from "../assets/Group.png";
 import tailwind from "../assets/tailwind.png";
