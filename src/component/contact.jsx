@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { response } from "express";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +7,7 @@ function Contact() {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   function Handlechange(e) {
     setFormData({
@@ -18,13 +18,14 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post(
         "http://localhost:5000/send-email",
         formData
       );
-
+     
       alert(response.data.message);
 
       setFormData({
@@ -35,6 +36,8 @@ function Contact() {
     } catch (error) {
       alert("Failed to send message");
       console.log(error);
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -80,16 +83,17 @@ function Contact() {
 
           <button
             type="submit"
+            disabled={loading}
             className="border-2 border-black py-3 px-6 font-semibold hover:bg-black hover:text-white transition"
           >
-            Send Message
+          {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
 
         <div className="mt-10 text-center space-y-2">
-          <p>Email: yourmail@example.com</p>
-          <p>GitHub: github.com/yourusername</p>
-          <p>LinkedIn: linkedin.com/in/yourusername</p>
+          <p>Email: Adeoluwavictor829@gmail.com</p>
+          <p>GitHub: github.com/Isholavictor2424</p>
+          <p>LinkedIn: linkedin.com/in/victor-ishola-941b61285</p>
         </div>
       </div>
     </section>

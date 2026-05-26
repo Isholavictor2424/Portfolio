@@ -8,23 +8,27 @@ const projects = [
     tech: "React, Tailwind CSS",
     github: "#",
     live: "#",
+    isLive: True,
   },
   {
-    title: "Task Management App",
+    title: "Brain dump App",
     description:
-      "A clean and responsive task management application designed to help users organize daily activities efficiently.",
+      "A clean and responsive note-taking application designed to help users capture and organize their thoughts efficiently.",
     tech: "React, JavaScript, CSS",
-    github: "#",
-    live: "#",
+    github: "https://github.com/Isholavictor2424/BrainDump",
+    live: "http://brain-dump-sigma.vercel.app/",
+    isLive: True,
   },
-  {
-    title: "Mobile UI Project",
-    description:
-      "A mobile-first interface project focused on clean layouts, usability, and smooth user experience.",
-    tech: "Flutter",
-    github: "#",
-    live: "#",
-  },
+ {
+  title: "Duvic-Drop Commerce App",
+  description:
+    "Collaborated on the development of the Duvic-Drop Commerce mobile application, contributing to the user interface design and mobile experience with a focus on usability, responsiveness, and clean visual structure.",
+  tech: "React Native, JavaScript, CSS",
+  github: "https://github.com/cephas-digital/Duvic-Drop-Mobile-App",
+  live: "Coming Soon",
+  isLive: false,
+
+},
 ];
 
 function Portfolio() {
@@ -53,12 +57,18 @@ function Portfolio() {
               >
                 GitHub
               </a>
+              { project.isLive ? (
               <a
                 href={project.live}
                 className="bg-sky-500 px-4 py-2 rounded-full hover:bg-sky-600 transition"
               >
                 Live Demo
-              </a>
+              </a>) : (
+                <span className="bg-gray-600 px-4 py-2 rounded-full cursor-not-allowed opacity-50">
+                  Live Demo
+                </span>
+              )
+              }
             </div>
           </div>
         ))}

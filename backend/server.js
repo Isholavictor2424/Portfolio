@@ -60,6 +60,10 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Portfolio Contact API");
+});
+
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });

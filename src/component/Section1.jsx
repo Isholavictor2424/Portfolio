@@ -1,6 +1,5 @@
 import React from "react";
-import mypic from "../assets/mypic.jpg";
-import newPic from "../assets/newPic.png";
+import updatedPic from "../assets/updatedPic.png";
 
 function Section1() {
   return (
@@ -34,9 +33,9 @@ function Section1() {
 
       <div className="relative z-10 w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
         <img
-          src={newPic}
+          src={updatedPic}
           alt="Victor"
-          className="max-h-[75vh] object-contain"
+          className="max-h-[95vh] object-contain"
         />
       </div>
     </section>
