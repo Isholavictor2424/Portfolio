@@ -22,10 +22,11 @@ function Contact() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/send-email",
+        `${import.meta.env.VITE_API_URL}/send-email`,
         formData
       );
-     
+
+
       alert(response.data.message);
 
       setFormData({
@@ -36,7 +37,7 @@ function Contact() {
     } catch (error) {
       alert("Failed to send message");
       console.log(error);
-    } finally{
+    } finally {
       setLoading(false);
     }
   };
@@ -86,7 +87,7 @@ function Contact() {
             disabled={loading}
             className="border-2 border-black py-3 px-6 font-semibold hover:bg-black hover:text-white transition"
           >
-          {loading ? "Sending..." : "Send Message"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
 
