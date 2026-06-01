@@ -20,6 +20,8 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
 
+    console.log("API URL:", import.meta.env.VITE_API_URL);
+
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/send-email`,
