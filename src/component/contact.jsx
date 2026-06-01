@@ -24,7 +24,7 @@ function Contact() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/send-email`,
+        "https://portfolio-api-o5kq.onrender.com/",
         formData
       );
 
