@@ -18,6 +18,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://portfolio-vtab.vercel.app/"
+  ]
+}));
+
 app.post("/send-email", async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -64,6 +71,6 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Portfolio Contact API");
 });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 10000, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
